@@ -187,6 +187,13 @@ DIVIDE(
    SUMX(InternetSales, POWER((InternetSales[SalesAmount] - XBar)/SD, 3)), n
 )
 
+-----------------------------------------------------
+StandardError = 
+VAR s = STDEV.P(InternetSales[SalesAmount])
+VAR CountVal = COUNT(InternetSales[SalesAmount])
+RETURN 
+    DIVIDE(s, SQRT(CountVal))
+
 
 
 
