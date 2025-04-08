@@ -162,5 +162,23 @@ VAR CountVal = COUNT(SalesData[Value])
 RETURN 
     DIVIDE(StdDev, SQRT(CountVal))
 
+------------------------------------------------------------------
+
+Mode = 
+VAR SummaryTable =
+    ADDCOLUMNS(
+        SUMMARIZE(InternetSales, InternetSales[SalesAmount]),
+        "Count", COUNTROWS(FILTER(InternetSales, InternetSales[SalesAmount] = EARLIER(InternetSales[SalesAmount])))
+    )
+RETURN
+    MAXX(
+        TOPN(1, SummaryTable, [Count], DESC),
+        InternetSales[SalesAmount]
+    )
+
+
+
+
+
 
 
