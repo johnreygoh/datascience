@@ -176,7 +176,16 @@ RETURN
         InternetSales[SalesAmount]
     )
 
+----------------------------------------------------------------------
 
+Skewness = 
+VAR XBar = AVERAGE(InternetSales[SalesAmount])
+VAR n = COUNT(InternetSales[SalesAmount])
+VAR SD = STDEV.P(InternetSales[SalesAmount])
+RETURN 
+DIVIDE(
+   SUMX(InternetSales, POWER((InternetSales[SalesAmount] - XBar)/SD, 3)), n
+)
 
 
 
