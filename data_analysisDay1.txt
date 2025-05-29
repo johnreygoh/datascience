@@ -1,0 +1,271 @@
+is this accessible?
+
+github.com/johnreygoh/datasets
+github.com/johnreygoh/datascience
+-----------------------------------------
+
+Analytics (3 common analytics)
+1. descriptive - now
+2. predictive - forecast/trends/whatif/params
+3. prescriptive - what to do
+*diagnostic
+*test
+*dummy
+
+data science
+-data analytics
+-process: data governance frameworks 
+-----------------------------------------
+
+
+EDA process
+Exploratory Data Analytics ("Explore")
+1. comprehend columns
+2. dataset size "shape of data"
+col x row 2456 x 17
+"reshape" 1000 x 10
+3. statistics
+
+--------------------------
+
+1. reqs
+
+dataset = table
+variables = columns / fields / attributes
+object = row
+
+values / reqs to extract:
+univariate analysis:
+1. oldest age
+2. youngest by byear
+3. most expensive ticket
+4. count by gender(m)
+5. count by gender(f)
+6. count passenger survived
+7. victim count
+8. count of crew
+9. count of passenger
+
+bivariate analysis
+1. survived by class
+2. survived by country
+3. age group by gender
+4. age group by disembarked
+5. survived by crew / passenger
+6. crew by gender
+
+multivariate analysis
+1. count of pass survived by gender and class
+2. count of age group survived by class
+3. count of infant by gender and survived
+4. victim count by crew/passenger and country
+5. victim by female gender and crew 
+6. sum of individual gender by home country (sweden)
+7. count of crew/passenger by class and embarked
+8. survived by class and age group
+
+2. collect data
+3. clean
+
+data cleaning / wrangling / ETL Extract-Transform-Load
+1. shape
+2. population vs sample
+3. data types (whole num, deci, currency, date, text)
+4. missing values
+5. errors
+6. additional processing
+- additional variables
+- perform calculated columns
+- formatting and modification of display
+
+power query
+
+traditional
+dataset(csv)--->analyze
+
+recommended
+dataset(csv)--power query-->import into a new workbook
+
+----------------------------------------------------
+
+excel----pq----dataset (file-based [import data])
+excel----pq----database (direct query [connection])
+
+pq: 
+commands (type, formattings, append-merge-combine)
+
+------------------------------------------------------
+
+dataset----pq(etl)----excel
+
+1. multiple queries
+
+ex: 
+github.com/johnreygoh/datasets
+
+2. appending queries
+
+jan2025
+id  prodname   stocks
+1   a		12
+2   b		11
+
+feb2025
+id  prodname   stocks
+10   c		12
+11   d		11
+12   e		12
+
+
+3. merging queries
+
+employee
+id  fn  ln dept  pos age  fa   mo  addr
+
+
+empA
+id  fn    ln
+1   koko   reyes
+
+emppersonalB
+id age  fa    mo    addr
+1  24   momo  mimi  manila
+2  25   lolo  lala  makati
+
+empworkC
+id  dept  pos
+1   mis   dev
+2   hr    mngr
+
+
+1. related columns
+2. relationship type
+
+JOINS
+inner join = matching records
+left outer join
+right outer join
+full outer join
+
+
+
+4. power query M language
+
+excel:
+upper(a1)
+
+power query m
+text.upper()
+
+via coding / available formatting tools
+
+---------------------------------
+Statistical functions
+aggregate functions (group)
+
+basic analytics
+sum	p
+average	s	
+max	p	
+min	p
+count	p
+count distinct	p
+
+mid-level analytics
+mean	s
+median	s
+mode	s
+range	s
+variance	s
+standard deviation	s
+
+deep-level analytics
+skewness	p
+kurtosis	p
+correlation	s
+covariance	s
+
+handle nulls
+-dataset 85% complete ok if population purpose
+-manage nulls
+1. reconfirm
+2. impute
+	fill down
+	fill up
+	moving average
+	average
+
+3. replace ("0", "NA","undefined")
+
+1
+1
+1
+2
+1.23
+-
+-
+-
+3
+3
+
+---------------------------------------
+
+10900
+90000
+89000
+88000
+-
+78000
+99000
+-
+88000
+
+------------------------------------
+
+
+
+
+
+
+
+
+handle errors
+
+4. analyze
+5. visualize
+---------------------------------------------------------------
+
+power bi
+-power bi desktop (create) 
+not for presentation, sharing
+
+-power bi service (online, collab + sharing + presentation)
+app.powerbi.com
+
+excel - excel functions
+excel macros - VBA
+power query - power query M language
+power bi - Dynamic Analytical eXpression (DAX)
+
+------------------------------------------------------
+
+adding calculated fields
+1. pquery
+2. pbi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

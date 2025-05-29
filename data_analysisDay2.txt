@@ -1,0 +1,170 @@
+PBI
+Relationships and Data Models
+*handle errors / nulls
+*visuals
+-----------------------------------------
+7 datasets
+
+merging (combine columns based on primary col)
+t1
+id 	name
+1	koko
+
+t2
+id 	dept
+1	hr
+
+m
+id	name	dept
+1	koko	hr
+-----------------------------------------------------
+
+isales
+tid	pid	
+1	2	
+2	2	
+3	3	
+4	3	
+
+products
+pid	name
+1	a
+2	b
+3	c
+
+----------------------------------------------
+hierarchy
+
+date
+custom hierarchy
+-------------------------------
+
+activity:
+3-page report
+1. at least 5 univariate analysis
+2. at least 5 bivariate analysis
+3. trend line of sales and profit
+4. forecast of profit and sales for the next 3 years
+5. use slicers on all pages
+6. no q&a
+7. publish then call facilitator for checking
+
+
+sankey chart (multivariate)
+			
+orders:
+region x category x sales
+group x region x sales amount
+-----------------------------------------------
+
+analytics -> statistics
+
+statistics:
+basic:
+sum = totality
+average = "normal" / "base" 
+max = highest (reward/outliers/anomalies) 
+min = lowest (recognition?!/outliers/anomalies)
+count = how many records / transaction
+count(distinct) = no of elements
+
+mid:
+mean = "perfect point of distribution"
+median = (sorted, equal parts left and right)
+mode = frequency of occurence
+standard deviation = distance of values from the ave
+
+*high stdev = inconsistent / irregular
+*low stdev = consistent
+
+range = how wide is distribution of values
+
+ex. 1 (test scores [50 items])
+range = 30	
+
+*high range = a lot of unique values
+*low range = few options only
+
+variance = 
+average of the square of difference to the mean
+distance of values from the ave
+*same role as stdev, use stdev for easier analytics
+
+ave = 40
+
+10 - 40 0
+20 - 40 0
+30 - 40 0
+40 - 40 0
+50 - 40 10	100
+90 - 40 50	2500
+
+variance^2 = stdev
+
+var = 2500
+stdev = 50
+
+stdev = 10
+var = 100
+-----------------------------------------
+
+standard error = 
+*ONLY if using samples
+*confidence level of average from diff samples
+*if high standard error, avoid sampling
+
+-------------------------------------------------------
+
+basic:
+sum
+ave
+max
+min
+count
+count(dist)
+
+mid:
+mean
+median
+mode
+stdev
+range
+variance
+stderror
+
+deep:
+skewness
+*answers the question:
+which is more frequent - higher or lower values
+*tailedness (left / right / symmetrical)
+
+Zero Skewness: Symmetric distribution.
+Positive Skewness: Tail on the right (more small values).
+Negative Skewness: Tail on the left (more larger values).
+
+kurtosis
+*peakness
+-high peak (outliers / anomalies)
+-flatness
+
+Mesokurtic (K = 3): Normal distribution.
+Leptokurtic (K > 3): Heavy tails, sharp peak.
+Platykurtic (K < 3): Light tails, flatter peak.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
